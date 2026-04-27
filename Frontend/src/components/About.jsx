@@ -53,7 +53,7 @@ const About = () => {
                 </div>
 
                 <div className="a-action-block">
-                    <a className="a-btn a-btn-main" href="#" target="_blank" rel="noopener noreferrer">
+                    <a className="a-btn a-btn-main" href="/Somen_CV.pdf" target="_blank" rel="noopener noreferrer">
                         <FaDownload /> DOWNLOAD_CV
                     </a>
                     <button className="a-btn a-btn-outline" onClick={(e) => Scroll_To_Section(e, 'CONTACT')}>

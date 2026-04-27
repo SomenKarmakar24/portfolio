@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaCode, FaServer, FaMobileScreenButton, FaGlobe, FaShieldHalved, FaDatabase } from 'react-icons/fa6';
 import "../assets/css/Service.css";
-import { use_Parent_API } from '../context/Parent_API_Context';
 
 const Service = () => {
 

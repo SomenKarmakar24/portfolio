@@ -7,6 +7,12 @@ import { Scroll_To_Section } from '../utils/Scroll_To_Section';
 
 const Hero = () => {
     const [logs, setLogs] = useState([]);
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        const clock = setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
+        return () => clearInterval(clock);
+    }, []);
 
     // Top Code Processing in Terminal animation
     useEffect(() => {
@@ -47,7 +53,7 @@ const Hero = () => {
             <div className="h-top-bar">
                 <div className="h-status-item"> <FaSatellite className='fs-4'/> L-SAT: ACTIVE</div>
                 <div className="h-status-item"> <span> <FaCode className='fs-4'/> LANG: REACT_JS, DRF </span></div>
-                <div className="h-status-item h-time">{new Date().toLocaleTimeString()}</div>
+                <div className="h-status-item h-time">{time}</div>
             </div>
 
             <div className="h-side-logs">
