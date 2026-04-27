@@ -34,7 +34,7 @@ const certificateData = [
     {
         id: 4,
         title: "Soft Skill Development",
-        issuedBy: "Coursera",
+        issuedBy: "NPTEL",
         date: "JAN 2023",
         credentialUrl: null,
         image: cert4,
