@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaCode, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import "../assets/css/Project.css";
+import portfolioThumbnail from '../assets/img/portfolio_thumbnail.png';
 
-const projectData = [];
+const projectData = [
+    {
+        id: 1,
+        title: "Developer Portfolio",
+        description: "A hacker-themed full-stack developer portfolio with Matrix rain background, terminal UI, dynamic sections and Web3Forms contact integration.",
+        github_url: "https://github.com/SomenKarmakar24/portfolio",
+        live_url: null,
+        image: portfolioThumbnail,
+        tech: [
+            { name: "React.js" },
+            { name: "Django" },
+            { name: "PostgreSQL" },
+            { name: "REST API" },
+            { name: "Cloudinary" },
+        ]
+    },
+];
 
 const Project = () => {
     const [activeCard, setActiveCard] = useState(null);
@@ -46,13 +63,16 @@ const Project = () => {
                                 </div>
                                 <div className="p-id">NODE_0{index + 1}</div>
                             </div>
-                            <div className="p-card-body">
+                            <div className="p-card-body p-card-horizontal">
                                 <div className="p-image-wrapper">
-                                    <img src={project.image} alt={project.title} loading="lazy" />
+                                    {project.image 
+                                        ? <img src={project.image} alt={project.title} loading="lazy" />
+                                        : <div className="p-no-image">NO_PREVIEW_AVAILABLE</div>
+                                    }
                                     <div className="p-overlay">
                                         <div className="p-links" onClick={(e) => e.stopPropagation()}>
                                             <a href={project.github_url} target="_blank" rel="noreferrer" className="p-icon-btn"><FaGithub /></a>
-                                            <a href={project.live_url} target="_blank" rel="noreferrer" className="p-icon-btn"><FaExternalLinkAlt /></a>
+                                            <a href={project.live_url || '#'} target={project.live_url ? "_blank" : "_self"} rel="noreferrer" className={`p-icon-btn ${!project.live_url ? 'p-icon-btn-disabled' : ''}`} onClick={(e) => !project.live_url && e.preventDefault()}><FaExternalLinkAlt /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +81,7 @@ const Project = () => {
                                     <p className="p-project-desc">{project.description}</p>
                                     <div className="p-tech-stack">
                                         {project.tech.map((t, i) => (
-                                            <span key={i} className="p-tag"><FaCode className="p-tag-icon" /> {t}</span>
+                                            <span key={i} className="p-tag"><FaCode className="p-tag-icon" /> {t.name}</span>
                                         ))}
                                     </div>
                                 </div>
