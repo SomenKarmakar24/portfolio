@@ -1,0 +1,168 @@
+/* Hacker Theme Variables */
+:root {
+    --n-bg: #050a05;
+}
+
+.n-navbar {
+    background: var(--n-bg);
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: var(--font);
+    border-bottom: 1px solid var(--matrix--neon-dim);
+}
+
+.n-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.n-logo {
+    color: var(--matrix-neon);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--matrix-neon);
+}
+
+.n-cursor {
+    animation: n-blink 1s infinite;
+}
+
+/* Desktop Nav Links */
+.n-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.n-nav-item a {
+    text-decoration: none;
+    color: var(--matrix-neon);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.n-nav-item a:hover {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--matrix-neon);
+}
+
+.n-prefix {
+    color: #fff;
+    font-weight: bold;
+}
+
+.n-mobile-icon {
+    display: none;
+    color: var(--matrix-neon);
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 1001; /* Above sidebar */
+}
+
+.n-nav-border-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--matrix-neon);
+    box-shadow: 0 0 15px var(--matrix-neon);
+}
+
+/* MOBILE SIDEBAR STYLING */
+/* Replace your @media screen (max-width: 992px) block with this */
+
+@media screen and (max-width: 992px) {
+    .n-nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(3, 8, 3, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        /* The Secret Sauce: Skewed entry */
+        clip-path: circle(0% at 100% 0%); /* Starts as a tiny circle at top-right */
+        transition: clip-path 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        
+        z-index: 1000;
+        border-left: none;
+    }
+
+    .n-nav-links.n-active {
+        clip-path: circle(150% at 100% 0%); /* Expands to cover screen */
+    }
+
+    /* CRT Scanline effect just for mobile menu */
+    .n-nav-links::before {
+        content: " ";
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .n-nav-item {
+        width: 100%;
+        left: 10%;
+        padding: 0;
+        margin: 8px 0;
+        position: relative;
+        z-index: 3;
+    }
+
+    .n-nav-item a {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #fff; /* White text for contrast */
+        text-shadow: 2px 2px var(--matrix--neon-dim);
+        letter-spacing: 5px;
+        transition: 0.3s;
+    }
+
+    /* Hover effect inside the mobile menu */
+    .n-nav-item a:hover {
+        color: var(--matrix-neon);
+        text-shadow: 0 0 15px var(--matrix-neon);
+        transform: skewX(-10deg);
+    }
+
+    .n-prefix {
+        color: var(--matrix-neon);
+        margin-right: 10px;
+    }
+
+    .n-mobile-icon {
+        display: block;
+        z-index: 1001;
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes n-blink {
+    50% { opacity: 0; }
+}
