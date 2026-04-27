@@ -9,7 +9,7 @@ const About = () => {
             <div className="a-dossier-header">
                 <div className="p-title">
                     <FaUser className="a-icon-neon" />
-                    <h2 className='m-0'><strong>ABOUT:</strong> Somen Karmakar</h2>
+                    <h2 className='m-0'><strong>ABOUT:</strong></h2>
                 </div>
                 <div className="a-clearance">CLEARANCE: LEVEL_4</div>
             </div>

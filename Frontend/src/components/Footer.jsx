@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaCircle } from 'react-icons/fa';
 import "../assets/css/Footer.css";
-import { FaYoutube } from 'react-icons/fa6';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -54,9 +53,7 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/somen-karmakar-74453724a/" target="_blank" rel="noreferrer" className="f-social-link">
                             <FaLinkedin /> <span className="f-tooltip">LINKEDIN</span>
                         </a>
-                        <a href="#" target="_blank" rel="noreferrer" className="f-social-link">
-                            <FaYoutube /> <span className="f-tooltip">YouTube</span>
-                        </a>
+
                     </div>
                 </div>
             </div>
