@@ -7,6 +7,7 @@ import Project from "./Project"
 import Skills from "./Skills"
 import Service from "./Service"
 import GitContribution from "./GitContribution"
+import Education from "./Education"
 
 export{
     About,
@@ -18,4 +19,5 @@ export{
     Skills,
     Service,
     GitContribution,
+    Education,
 }
