@@ -116,6 +116,13 @@
     border: 2px solid var(--matrix-neon);
     filter: grayscale(1) brightness(0.9) contrast(1.1);
     box-shadow: 0 0 30px var(--matrix--neon-dim);
+    transition: filter 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.h-image-wrapper:hover .h-profile-img {
+    filter: grayscale(0) brightness(1) contrast(1);
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--matrix-neon);
 }
 
 .h-scan-ring {

@@ -4,28 +4,20 @@ import '../assets/css/Education.css';
 
 const educationData = [
     {
-        degree: "Bachelor of Technology (B.Tech)",
+        degree: "B.Tech",
         field: "Computer Science & Engineering",
-        institution: "Your University Name",
-        location: "Kolkata, West Bengal",
-        year: "2020 - 2024",
-        grade: "CGPA: 8.5 / 10",
+        institution: "Techno Engineering College Banipur",
+        location: "Habra",
+        year: "2022 - 2026",
+        grade: "CGPA: 7.56 / 10",
     },
     {
-        degree: "Higher Secondary (12th)",
-        field: "Science (PCM)",
-        institution: "Your College Name",
-        location: "West Bengal",
-        year: "2018 - 2020",
-        grade: "Percentage: 85%",
-    },
-    {
-        degree: "Secondary (10th)",
-        field: "General",
-        institution: "Your School Name",
-        location: "West Bengal",
-        year: "2018",
-        grade: "Percentage: 90%",
+        degree: "High Secondary",
+        field: "PCM and Biology",
+        institution: "Habra High School",
+        location: "Habra",
+        year: "2013 - 2021",
+        grade: "Percentage: 82.2%",
     },
 ];
 
@@ -36,7 +28,7 @@ const Education = () => {
                 <div className="a-dossier-header">
                     <div className="p-title">
                         <FaGraduationCap className="a-icon-neon" />
-                        <h2 className='m-0'><strong>EDUCATION:</strong> Somen Karmakar</h2>
+                        <h2 className='m-0'><strong>EDUCATION:</strong></h2>
                     </div>
                     <div className="a-clearance">CLEARANCE: LEVEL_3</div>
                 </div>

@@ -39,7 +39,7 @@ const Skills = () => {
                 <section className="a-dossier-header">
                     <div className="a-header-title">
                         <FaTerminal className="a-icon-neon" />
-                        <h2><strong>SKILLS:</strong> Somen Karmakar</h2>
+                        <h2><strong>SKILLS:</strong></h2>
                     </div>
                 </section>
 

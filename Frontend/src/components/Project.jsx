@@ -25,7 +25,7 @@ const Project = () => {
                     <div className="p-title">
                         <FaFolderOpen className="a-icon-neon" />
                         <h2 className='m-0'>
-                            <strong>PROJECTS:</strong> <small>Somen</small>
+                            <strong>PROJECTS:</strong>
                             <span className="p-count-badge">[{projectData.length}]</span>
                         </h2>
                     </div>

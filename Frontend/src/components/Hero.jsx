@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FaTerminal, FaCode, FaSatellite, FaSkullCrossbones } from 'react-icons/fa';
+import { FaTerminal, FaSatellite, FaSkullCrossbones } from 'react-icons/fa';
 import "../assets/css/Hero.css";
-import ProfileImg from "../assets/img/Sujan.jpeg"; 
+import ProfileImg from "../assets/img/Somen1.jpg"; 
 import Typing_Animation from '../utils/Typing_Animation';
 import { Scroll_To_Section } from '../utils/Scroll_To_Section';
 
@@ -52,7 +52,6 @@ const Hero = () => {
 
             <div className="h-top-bar">
                 <div className="h-status-item"> <FaSatellite className='fs-4'/> L-SAT: ACTIVE</div>
-                <div className="h-status-item"> <span> <FaCode className='fs-4'/> LANG: REACT_JS, DRF </span></div>
                 <div className="h-status-item h-time">{time}</div>
             </div>
 
@@ -68,7 +67,7 @@ const Hero = () => {
                 <div className="h-profile-module">
                     {/* This stays on right in Desktop, top in Mobile */}
                     <div className="h-image-wrapper">
-                        <img src={ProfileImg} alt="Sujan" className="h-profile-img" />
+                        <img src={ProfileImg} alt="Somen" className="h-profile-img" />
                         <div className="h-scan-ring"></div>
                     </div>
 
