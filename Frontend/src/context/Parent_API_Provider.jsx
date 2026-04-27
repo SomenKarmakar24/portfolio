@@ -16,7 +16,7 @@ const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
 const Parent_API_Provider = ({ children }) => {
   const [data, setData] = useState({
       locations: [],
-      cv: [],
+      cv: null,
       technologies: [],
       skillCategories: [],
       skills: [],

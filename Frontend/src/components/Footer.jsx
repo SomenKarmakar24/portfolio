@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaCircle } from 'react-icons/fa';
 import "../assets/css/Footer.css";
-import { Link } from 'react-router-dom';
 import { FaYoutube } from 'react-icons/fa6';
 
 const Footer = () => {
@@ -39,9 +38,9 @@ const Footer = () => {
                     <h4 className="f-footer-title">DIRECTORY</h4>
                     <ul className="f-footer-links">
                         <li><a href="#root">/root</a></li>
-                        <li><Link to="#projects">/home/projects</Link></li>
-                        <li><Link to="#about">/user/about_me</Link></li>
-                        <li><Link to="#contact">/bin/contact</Link></li>
+                        <li><a href="#PROJECTS">/home/projects</a></li>
+                        <li><a href="#ABOUT">/user/about_me</a></li>
+                        <li><a href="#CONTACT">/bin/contact</a></li>
                     </ul>
                 </div>
 

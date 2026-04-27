@@ -1,53 +1,29 @@
 import React from 'react'
 import { About, Contact, Skills, Hero, Project, Service, GitContribution, Education } from '../components/Components_Import'
-import "../assets/css/Navbar.css"
 
 const Home = () => {
     return (
         <div className='Home-container'>
                 
             {/* Hero Section */}
-            <section id='HERO' className='Home-section'>
-                <Hero />
-            </section>
+            <Hero />
 
-            <section id='GIT_CONTRIBUTION' className='Home-section'>
-                <GitContribution />
-            </section>
+            <GitContribution />
 
             {/* About Section */}
-            <section id='ABOUT' className='Home-section'>
-                <About />
-            </section>
+            <About />
 
             {/* Education Section */}
-            <section id='EDUCATION' className='Home-section'>
-                <Education />
-            </section>
-
-            {/* Service Section */}
-            {/* <section id='ABOUT' className='Home-section'>
-                <Service />
-            </section> */}
-
+            <Education />
 
             {/* Skills Section */}
-            <section id='SKILLS' className='Home-section'>
-                <Skills />
-            </section>
-
+            <Skills />
 
             {/* Project Section */}
-            <section id='PROJECTS' className='Home-section'>
-                <Project />
-            </section>
-
+            <Project />
 
             {/* Contact Section */}
-            <section id='CONTACT' className='Home-section'>
-                <Contact />
-            </section>
-
+            <Contact />
 
         </div>
     )

@@ -80,7 +80,7 @@ const GitContribution = () => {
         return () => container.removeEventListener('scroll', handleScroll);
     }, [width]);
 
-    const years = ['last', 2026, 2025, 2024];
+    const years = ['last', 2025, 2024];
 
     return (
         <section className="p-git-section">
