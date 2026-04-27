@@ -5,7 +5,7 @@ import "../assets/css/Skills.css";
 const skillCategories = [
     {
         icon: <FaCode />,
-        skill_type: "FRONTEND_PROTOCOLS",
+        skill_type: "FRONTEND",
         skills: [
             { name: "React.js", level: 85 },
             { name: "HTML & CSS", level: 90 },
@@ -14,10 +14,10 @@ const skillCategories = [
     },
     {
         icon: <FaDatabase />,
-        skill_type: "BACKEND_LOGIC",
+        skill_type: "BACKEND",
         skills: [
-            { name: "Python", level: 75 },
-            { name: "REST API", level: 80 },
+            { name: "Python", level: 80 },
+            { name: "OpenAI Agent SDK", level: 50 },
             { name: "PostgreSQL", level: 70 },
         ]
     },
@@ -27,7 +27,7 @@ const skillCategories = [
         skills: [
             { name: "Git & GitHub", level: 85 },
             { name: "VS Code", level: 90 },
-            { name: "Postman", level: 75 },
+            { name: "AI Chat Tools", level: 95 },
         ]
     },
 ];
