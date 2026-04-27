@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, Contact, Skills, Hero, Project, Service, GitContribution, Education } from '../components/Components_Import'
+import { About, Contact, Skills, Hero, Project, Service, GitContribution, Education, Certificate } from '../components/Components_Import'
 
 const Home = () => {
     return (
@@ -21,6 +21,9 @@ const Home = () => {
 
             {/* Project Section */}
             <Project />
+
+            {/* Certificate Section */}
+            <Certificate />
 
             {/* Contact Section */}
             <Contact />
