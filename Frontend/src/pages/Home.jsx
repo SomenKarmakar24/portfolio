@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, Contact, Skills, Hero, Project, Service, GitContribution } from '../components/Components_Import'
+import { About, Contact, Skills, Hero, Project, Service, GitContribution, Education } from '../components/Components_Import'
 import "../assets/css/Navbar.css"
 
 const Home = () => {
@@ -18,6 +18,11 @@ const Home = () => {
             {/* About Section */}
             <section id='ABOUT' className='Home-section'>
                 <About />
+            </section>
+
+            {/* Education Section */}
+            <section id='EDUCATION' className='Home-section'>
+                <Education />
             </section>
 
             {/* Service Section */}

@@ -34,7 +34,7 @@ const Hero = () => {
     const handleCodeVora = () => {
         try{
             window.open(`https://codevora140.vercel.app`)
-        } catch {
+        } catch(e) {
             console.log(e)
         }
     }
@@ -79,8 +79,8 @@ const Hero = () => {
                                     <Typing_Animation 
                                         words={[
                                             "Full-Stack Developer...",
-                                            "Imaginator, Dreamer...",
-                                            "Gamer and Learner...",
+                                            "Agentic AI Engineer...",
+                                            "Backend Engineer...",
                                             "Web Developer...",
                                         ]}
                                         speed={90}
@@ -96,7 +96,7 @@ const Hero = () => {
                                 <span className="h-bio-label">DESCRIPTION:</span> Another curious person who is always ready to learn new things and Passionate about building efficient and scalable Web App.
                             </p>
                             <p className="h-bio-text">
-                                <span className="h-bio-label">LOCATION:</span> 27.7172° N, 85.3240° E [KATHMANDU]
+                                <span className="h-bio-label">LOCATION:</span> Kolkata, West Bengal
                             </p>
                         </div>
                     </div>
@@ -107,9 +107,7 @@ const Hero = () => {
                     <button className="h-console-btn" onClick={(e) => Scroll_To_Section(e, 'PROJECTS')}>
                         <FaTerminal /> INITIATE_PROJECTS
                     </button>
-                    <button className="h-console-btn h-danger" onClick={handleCodeVora}>
-                        <FaSkullCrossbones /> CODEVORA_UI
-                    </button>
+
                 </div>
             </div>
 

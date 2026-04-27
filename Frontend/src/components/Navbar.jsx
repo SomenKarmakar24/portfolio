@@ -40,6 +40,11 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="n-nav-item">
+                        <a href="#EDUCATION" onClick={(e) => handleNavClick(e, 'EDUCATION')}>
+                            <span className="n-prefix">{">> "}</span>EDUCATION
+                        </a>
+                    </li>
+                    <li className="n-nav-item">
                         <a href="#SKILLS" onClick={(e) => handleNavClick(e, 'SKILLS')}>
                             <span className="n-prefix">{">> "}</span>SKILLS
                         </a>

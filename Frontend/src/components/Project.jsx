@@ -76,7 +76,7 @@ const Project = () => {
                     </p>
                 )}
 
-                {!projectData.length === 0 && projectData.length > defaultLimit && (
+                {projectData.length > defaultLimit && (
                     <div className="p-view-more-container">
                         <button className="p-view-more-btn" onClick={() => setShowAll(!showAll)}>
                             {showAll ? <>CLOSE CATALOG <FaChevronUp /></> : <>VIEW ALL PROJECTS ({projectData.length}) <FaChevronDown /></>}
