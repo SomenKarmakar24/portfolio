@@ -16,7 +16,7 @@ const skillCategories = [
         icon: <FaDatabase />,
         skill_type: "BACKEND_LOGIC",
         skills: [
-            { name: "Django", level: 75 },
+            { name: "Python", level: 75 },
             { name: "REST API", level: 80 },
             { name: "PostgreSQL", level: 70 },
         ]
