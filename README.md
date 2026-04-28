@@ -1,12 +1,11 @@
 # ⚡ SOMEN KARMAKAR | Developer Portfolio
 
 ![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Django](https://img.shields.io/badge/Django-6.0-092E20?style=for-the-badge&logo=django&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-> A hacker-themed, terminal-inspired developer portfolio built with React and Django REST Framework. Features Matrix rain background, boot screen animation, GitHub contribution graph, and a fully functional contact form.
+> A hacker-themed, terminal-inspired developer portfolio built with React. Features Matrix rain background, boot screen glitch animation, GitHub contribution graph, certificates section and a fully functional contact form.
 
 ---
 
@@ -18,44 +17,33 @@
 
 ## ✨ Features
 
-- **Boot Screen Animation** — Matrix rain + RGB glitch intro on page load
+- **Boot Screen Animation** — Matrix rain canvas + RGB glitch intro on page load
 - **Matrix Binary Rain** — High-performance Canvas API background
 - **Interactive Terminal UI** — Terminal-styled cards, navigation and console elements
 - **Live Clock** — Real-time ticking clock in the Hero HUD
 - **GitHub Contribution Graph** — Live GitHub calendar with year selector
+- **About Section** — Personal info, social links and CV download
 - **Education Section** — Timeline-style education cards
 - **Skills Section** — Animated progress bars per skill category
 - **Projects Section** — Horizontal cards with thumbnail, tech stack icons and GitHub/live links
 - **Certificates Section** — Grid layout with thumbnail, issuer, date and verify button
 - **Contact Form** — Integrated with Web3Forms — messages land directly in your inbox
 - **CV Download** — Direct PDF download from the About section
-- **Fully Responsive** — Mobile-first design with sidebar navigation
+- **Fully Responsive** — Mobile-first design with animated sidebar navigation
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-| Tech | Version |
-|------|---------|
-| React.js | 19 |
-| Vite | 7 |
-| React Router DOM | 7 |
-| React Icons | 5 |
-| React GitHub Calendar | 5 |
-| React Tooltip | 5 |
-| Axios | 1.13 |
-
-### Backend
-| Tech | Version |
-|------|---------|
-| Django | 6.0 |
-| Django REST Framework | 3.16 |
-| Django CORS Headers | 4.9 |
-| Cloudinary | 1.44 |
-| dj-database-url | 3.0 |
-| Gunicorn | 23.0 |
-| WhiteNoise | 6.11 |
+| Tech | Version | Purpose |
+|------|---------|---------|
+| React.js | 19 | UI Framework |
+| Vite | 7 | Build Tool |
+| React Router DOM | 7 | Client-side Routing |
+| React Icons | 5 | Icon Library |
+| React GitHub Calendar | 5 | GitHub Contribution Graph |
+| React Tooltip | 5 | Tooltip Component |
+| Web3Forms | - | Contact Form Submission |
 
 ---
 
@@ -63,77 +51,69 @@
 
 ```
 portfolio/
-├── Frontend/
-│   ├── public/
-│   │   ├── Somen.png           # Favicon
-│   │   └── Somen_CV.pdf        # CV for download
-│   └── src/
-│       ├── assets/
-│       │   ├── css/            # Component-scoped CSS files
-│       │   └── img/            # Profile image, thumbnails, certificates
-│       ├── components/         # All UI components
-│       ├── context/            # API context & provider
-│       ├── pages/              # Home page
-│       ├── routes/             # Route definitions
-│       └── utils/              # BootScreen, Background, Typing animation
-└── Backend/
-    ├── Home/                   # Projects, Skills, CV models & API
-    ├── Email/                  # Contact form model
-    ├── api/                    # URL routing
-    └── Backend/                # Django settings
+└── Frontend/
+    ├── public/
+    │   ├── Somen.png               # Favicon
+    │   └── Somen_CV.pdf            # CV for download
+    └── src/
+        ├── assets/
+        │   ├── css/                # Component-scoped CSS files
+        │   └── img/                # Profile image, project thumbnail, certificates
+        ├── components/             # All UI components
+        │   ├── Navbar.jsx
+        │   ├── Hero.jsx
+        │   ├── GitContribution.jsx
+        │   ├── About.jsx
+        │   ├── Education.jsx
+        │   ├── Skills.jsx
+        │   ├── Project.jsx
+        │   ├── Certificate.jsx
+        │   ├── Contact.jsx
+        │   └── Footer.jsx
+        ├── pages/
+        │   └── Home.jsx            # Main page
+        └── utils/
+            ├── BootScreen.jsx      # Glitch boot animation
+            ├── Interactive_Background.jsx  # Matrix rain canvas
+            ├── Typing_Animation.jsx
+            └── Scroll_To_Section.jsx
 ```
 
 ---
 
 ## ⚙️ Environment Variables
 
-### `Frontend/.env`
+Create a `.env` file inside the `Frontend/` folder:
+
 ```env
 VITE_EMAIL_ACCESS_KEY=your-web3forms-access-key
-VITE_API_URL_PRODUCTION=https://your-backend-host-url
-VITE_API_URL_DEVELOPMENT=http://127.0.0.1:8000
 ```
 
-### `Backend/.env`
-```env
-SECRET_KEY=your-django-secret-key
-DEBUG=False
-ALLOWED_HOSTS=*
-PRODUCTION_DATABASE_URL=your-production-database-url
-DEVELOPMENT_DATABASE_URL=your-development-database-url
-CLOUD_NAME=your-cloudinary-name
-CLOUD_API_KEY=your-cloudinary-api-key
-CLOUD_API_SECRET=your-cloudinary-api-secret
-```
+> Get your free access key at [web3forms.com](https://web3forms.com)
 
 ---
 
 ## 🚀 Installation & Setup
 
-### Frontend
 ```bash
-cd Frontend
-npm install
-npm run dev
-```
+# Clone the repository
+git clone https://github.com/SomenKarmakar24/portfolio.git
 
-### Backend
-```bash
-cd Backend
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
+# Navigate to Frontend
+cd portfolio/Frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
 ---
 
 ## 📦 Deployment
 
-- **Frontend** → [Vercel](https://vercel.com)
-- **Backend** → [Render](https://render.com)
-- **Database** → [Neon](https://neon.tech) / [Supabase](https://supabase.com)
-- **Media Storage** → [Cloudinary](https://cloudinary.com)
+- **Frontend** → [GitHub Pages](https://pages.github.com) / [Vercel](https://vercel.com) / [Netlify](https://netlify.com)
 
 ---
 
