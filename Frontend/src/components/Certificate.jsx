@@ -7,34 +7,12 @@ import cert3 from '../assets/img/cert_3.png';
 import cert4 from '../assets/img/cert_4.jpg';
 import cert5 from '../assets/img/cert_5.jpg';
 import cert6 from '../assets/img/cert_6.png';
+import cert7 from '../assets/img/cert_7.png';
+import cert8 from '../assets/img/cert_8.png';
 
 const certificateData = [
     {
         id: 1,
-        title: "Successful Career Development",
-        issuedBy: "Coursera",
-        date: "JUN 2023",
-        credentialUrl: "https://coursera.org/verify/GL4TGFMWN6YH",
-        image: cert1,
-    },
-    {
-        id: 2,
-        title: "Write Professional Emails in English",
-        issuedBy: "Coursera",
-        date: "April 2023",
-        credentialUrl: "https://coursera.org/verify/AXW7HZ2AQPPF",
-        image: cert2,
-    },
-    {
-        id: 3,
-        title: "Java Programming: Solving Problems with Software",
-        issuedBy: "Coursera",
-        date: "SEP 2023",
-        credentialUrl: "https://coursera.org/verify/Y8ZWGDKBY5U6",
-        image: cert3,
-    },
-    {
-        id: 4,
         title: "Soft Skill Development",
         issuedBy: "NPTEL",
         date: "JAN 2023",
@@ -42,12 +20,36 @@ const certificateData = [
         image: cert4,
     },
     {
-        id: 5,
+        id: 2,
         title: "Ethics In Engineering Practice",
         issuedBy: "NPTEL",
         date: "FEB 2023",
         credentialUrl: null,
         image: cert5,
+    },
+    {
+        id: 3,
+        title: "Write Professional Emails in English",
+        issuedBy: "Coursera",
+        date: "APR 2023",
+        credentialUrl: "https://coursera.org/verify/AXW7HZ2AQPPF",
+        image: cert2,
+    },
+    {
+        id: 4,
+        title: "Successful Career Development",
+        issuedBy: "Coursera",
+        date: "JUN 2023",
+        credentialUrl: "https://coursera.org/verify/GL4TGFMWN6YH",
+        image: cert1,
+    },
+    {
+        id: 5,
+        title: "Java Programming: Solving Problems with Software",
+        issuedBy: "Coursera",
+        date: "SEP 2023",
+        credentialUrl: "https://coursera.org/verify/Y8ZWGDKBY5U6",
+        image: cert3,
     },
     {
         id: 6,
@@ -56,6 +58,22 @@ const certificateData = [
         date: "SEP 2024",
         credentialUrl: null,
         image: cert6,
+    },
+    {
+        id: 7,
+        title: "Python",
+        issuedBy: "HackerRank",
+        date: "FEB 2025",
+        credentialUrl: "https://www.hackerrank.com/certificates/iframe/87c2280c76d9",
+        image: cert7,
+    },
+    {
+        id: 8,
+        title: "Introduction to Internet of Things",
+        issuedBy: "NPTEL",
+        date: "NOV 2025",
+        credentialUrl: null,
+        image: cert8,
     },
 ];
 
