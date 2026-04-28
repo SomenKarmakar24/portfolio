@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaChevronDown, FaChevronUp, FaReact, FaServer } from 'react-icons/fa';
-import { SiDjango, SiPostgresql, SiCloudinary } from 'react-icons/si';
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaChevronDown, FaChevronUp, FaReact } from 'react-icons/fa';
+import { SiVite, SiJavascript, SiCss3, SiBootstrap, SiReactrouter } from 'react-icons/si';
 import "../assets/css/Project.css";
 import portfolioThumbnail from '../assets/img/portfolio_thumbnail.png';
 
@@ -14,10 +14,11 @@ const projectData = [
         image: portfolioThumbnail,
         tech: [
             { name: "React.js", icon: <FaReact /> },
-            { name: "Django", icon: <SiDjango /> },
-            { name: "PostgreSQL", icon: <SiPostgresql /> },
-            { name: "REST API", icon: <FaServer /> },
-            { name: "Cloudinary", icon: <SiCloudinary /> },
+            { name: "Vite", icon: <SiVite /> },
+            { name: "JavaScript", icon: <SiJavascript /> },
+            { name: "CSS3", icon: <SiCss3 /> },
+            { name: "Bootstrap", icon: <SiBootstrap /> },
+            { name: "React Router", icon: <SiReactrouter /> },
         ]
     },
 ];
