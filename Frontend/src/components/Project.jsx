@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaChevronDown, FaChevronUp, FaReact } from 'react-icons/fa';
-import { SiVite, SiJavascript, SiCss3, SiBootstrap, SiReactrouter } from 'react-icons/si';
+import { SiVite, SiJavascript, SiCss3, SiBootstrap, SiReactrouter, SiOpenai, SiTailwindcss, SiFirebase, SiAxios, SiTypescript, SiNextdotjs } from 'react-icons/si';
 import "../assets/css/Project.css";
 import portfolioThumbnail from '../assets/img/portfolio_thumbnail.png';
+import adMorphThumbnail from '../assets/img/AdMorph.jpg';
 
 const projectData = [
     {
@@ -19,6 +20,22 @@ const projectData = [
             { name: "CSS3", icon: <SiCss3 style={{color: '#1572B6'}} /> },
             { name: "Bootstrap", icon: <SiBootstrap style={{color: '#7952B3'}} /> },
             { name: "React Router", icon: <SiReactrouter style={{color: '#CA4245'}} /> },
+        ]
+    },
+    {
+        id: 2,
+        title: "AdMorph - AI Ad Generator",
+        description: "AI-driven system that auto-generates creative product advertisements from user inputs like product details and target audience, using ML and NLP to deliver engaging, customizable ad content.",
+        github_url: null,
+        live_url: null,
+        image: adMorphThumbnail,
+        tech: [
+            { name: "Next.js 13+", icon: <SiNextdotjs style={{color: '#ffffff'}} /> },
+            { name: "React + TypeScript", icon: <SiTypescript style={{color: '#3178C6'}} /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss style={{color: '#06B6D4'}} /> },
+            { name: "Firebase", icon: <SiFirebase style={{color: '#FFCA28'}} /> },
+            { name: "OpenAI API", icon: <SiOpenai style={{color: '#00A67E'}} /> },
+            { name: "Axios", icon: <SiAxios style={{color: '#5A29E4'}} /> },
         ]
     },
 ];
