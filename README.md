@@ -1,97 +1,153 @@
-# ⚡ THE ARCHITECT PORTFOLIO | ER. SUJAN RAI
+# ⚡ SOMEN KARMAKAR | Developer Portfolio
 
-> ### 🚀 Powered by [CodeVora UI](https://codevora140.vercel.app)
-> **Elevate your web projects with CodeVora UI.** Get free, high-performance animated components, professional UI templates, and production-ready code snippets. 
-> **[Explore CodeVora UI Now →](https://codevora140.vercel.app)**
-
----
-
-![License](https://img.shields.io/badge/license-MIT-green)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-092E20?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Django](https://img.shields.io/badge/Django-6.0-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-## 🖥️ Overview
-A high-end, **Hacker-Themed Developer Portfolio** designed with a terminal-inspired aesthetic. This project showcases advanced React patterns, interactive canvas backgrounds (Matrix Rain), and professional UI/UX principles.
-
-
-## Environment Variables Used (.env) :
-**Backend/.env**
--  *SECRET_KEY*=your-django-secret-key
--  *DEBUG*=False
--  *ALLOWED_HOSTS*=*
--  *PRODUCTION_DATABASE_URL*=your-production-database-url
--  *DEVELOPMENT_DATABASE_URL*=your-development-database-url
--  *CLOUD_NAME*=your-cloudinary-name
--  *CLOUD_API_KEY*=your-cloudinary-api-key
--  *CLOUD_API_SECRET*=your-cloudinary-api-secret
-
-**Frontend/.env**
--  *VITE_API_URL_PRODUCTION*=https://your-backend-host-url
--  *VITE_API_URL_DEVELOPMENT*=http://127.0.0.1:8000
--  *VITE_EMAIL_ACCESS_KEY*=your-email-access-key
-
-
-
-### 🛠️ Key Features
-- **Matrix Binary Rain:** High-performance Canvas API implementation for a smooth hacker background.
-- **Interactive Terminal UI:** Custom-built terminal cards and console-style navigation.
-- **Dynamic Project Dossier:** Auto-incrementing project IDs and responsive layout.
-- **Secure Communication:** Contact protocols integrated with modern validation.
-- **Cyber-Sidebar:** Mobile-responsive navigation with backdrop-blur and "System Override" entry animations.
-
-## 🚀 Built With
-* **Frontend:** React.js, React Icons, CSS3 (Custom Variables/Keyframes)
-* **Animations:** Framer Motion / Custom Canvas API
-* **Styles:** Scoped Modular CSS
-* **Components:** Logic-driven UI elements from **CodeVora UI**
+> A hacker-themed, terminal-inspired developer portfolio built with React and Django REST Framework. Features Matrix rain background, boot screen animation, GitHub contribution graph, and a fully functional contact form.
 
 ---
 
-## 📦 Installation & Setup
+## 🖥️ Live Preview
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/architect-portfolio.git](https://github.com/yourusername/architect-portfolio.git)
-   ```
-2. **Navigate to the directory:**
-   ```bash
-   cd architect-portfolio
-   ```
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-4. **Launch the development server:**
-   ```bash
-   npm start 
-   ```
-   #    or
-   ```bash
-   npm run dev
-   ```
+🌐 [somenkarmakar.me](https://somenkarmakar.me) *(coming soon)*
 
+---
 
-### 💎 Support My Work
+## ✨ Features
 
-- **If you find this project helpful, consider checking out my main project:**
-**🚀 CodeVora UI** – The Ultimate Library for Modern Developers
+- **Boot Screen Animation** — Matrix rain + RGB glitch intro on page load
+- **Matrix Binary Rain** — High-performance Canvas API background
+- **Interactive Terminal UI** — Terminal-styled cards, navigation and console elements
+- **Live Clock** — Real-time ticking clock in the Hero HUD
+- **GitHub Contribution Graph** — Live GitHub calendar with year selector
+- **Education Section** — Timeline-style education cards
+- **Skills Section** — Animated progress bars per skill category
+- **Projects Section** — Horizontal cards with thumbnail, tech stack icons and GitHub/live links
+- **Certificates Section** — Grid layout with thumbnail, issuer, date and verify button
+- **Contact Form** — Integrated with Web3Forms — messages land directly in your inbox
+- **CV Download** — Direct PDF download from the About section
+- **Fully Responsive** — Mobile-first design with sidebar navigation
 
+---
 
-**✨ What CodeVora UI Offers**
-- ✅ Free Animated UI Components
-- ✅ Professional Layout Templates
-- ✅ Copy-Paste Ready Code Snippets
+## 🛠️ Tech Stack
 
+### Frontend
+| Tech | Version |
+|------|---------|
+| React.js | 19 |
+| Vite | 7 |
+| React Router DOM | 7 |
+| React Icons | 5 |
+| React GitHub Calendar | 5 |
+| React Tooltip | 5 |
+| Axios | 1.13 |
 
-**🌐 Website:** 
-- CodeVora UI: [`codevora140.vercel.app`](https://codevora140.vercel.app)
+### Backend
+| Tech | Version |
+|------|---------|
+| Django | 6.0 |
+| Django REST Framework | 3.16 |
+| Django CORS Headers | 4.9 |
+| Cloudinary | 1.44 |
+| dj-database-url | 3.0 |
+| Gunicorn | 23.0 |
+| WhiteNoise | 6.11 |
 
+---
 
-#   👤 Contact
+## 📁 Project Structure
 
-**Er. Sujan Rai**
+```
+portfolio/
+├── Frontend/
+│   ├── public/
+│   │   ├── Somen.png           # Favicon
+│   │   └── Somen_CV.pdf        # CV for download
+│   └── src/
+│       ├── assets/
+│       │   ├── css/            # Component-scoped CSS files
+│       │   └── img/            # Profile image, thumbnails, certificates
+│       ├── components/         # All UI components
+│       ├── context/            # API context & provider
+│       ├── pages/              # Home page
+│       ├── routes/             # Route definitions
+│       └── utils/              # BootScreen, Background, Typing animation
+└── Backend/
+    ├── Home/                   # Projects, Skills, CV models & API
+    ├── Email/                  # Contact form model
+    ├── api/                    # URL routing
+    └── Backend/                # Django settings
+```
 
--   🌐 Portfolio: [`er-sujan.vercel.app`](er-sujan.vercel.app)
--   💻 GitHub: [`https://github.com/Sujan-Rai-426/`](https://github.com/Sujan-Rai-426/)
+---
+
+## ⚙️ Environment Variables
+
+### `Frontend/.env`
+```env
+VITE_EMAIL_ACCESS_KEY=your-web3forms-access-key
+VITE_API_URL_PRODUCTION=https://your-backend-host-url
+VITE_API_URL_DEVELOPMENT=http://127.0.0.1:8000
+```
+
+### `Backend/.env`
+```env
+SECRET_KEY=your-django-secret-key
+DEBUG=False
+ALLOWED_HOSTS=*
+PRODUCTION_DATABASE_URL=your-production-database-url
+DEVELOPMENT_DATABASE_URL=your-development-database-url
+CLOUD_NAME=your-cloudinary-name
+CLOUD_API_KEY=your-cloudinary-api-key
+CLOUD_API_SECRET=your-cloudinary-api-secret
+```
+
+---
+
+## 🚀 Installation & Setup
+
+### Frontend
+```bash
+cd Frontend
+npm install
+npm run dev
+```
+
+### Backend
+```bash
+cd Backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+---
+
+## 📦 Deployment
+
+- **Frontend** → [Vercel](https://vercel.com)
+- **Backend** → [Render](https://render.com)
+- **Database** → [Neon](https://neon.tech) / [Supabase](https://supabase.com)
+- **Media Storage** → [Cloudinary](https://cloudinary.com)
+
+---
+
+## 👤 Contact
+
+**Somen Karmakar**
+
+- 🌐 Portfolio: [somenkarmakar.me](https://somenkarmakar.me)
+- 💻 GitHub: [github.com/SomenKarmakar24](https://github.com/SomenKarmakar24)
+- 💼 LinkedIn: [linkedin.com/in/somen-karmakar-74453724a](https://www.linkedin.com/in/somen-karmakar-74453724a/)
+- 📧 Email: somenkarmakar.info2432@gmail.com
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
