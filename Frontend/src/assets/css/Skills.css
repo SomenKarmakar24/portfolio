@@ -9,28 +9,12 @@
 }
 
 .s-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.s-header {
-    margin-bottom: 50px;
+    width: 100%;
+    border: 1px solid var(--matrix--neon-dim);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     position: relative;
-}
-
-.s-title {
-    font-size: 2rem;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.s-prefix { color: #fff; margin-right: 10px; }
-
-.s-scanner-line {
-    width: 100px;
-    height: 2px;
-    background: var(--matrix-neon);
-    box-shadow: 0 0 10px var(--matrix-neon);
 }
 
 /* Skills Grid */
@@ -121,6 +105,13 @@
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
     .s-skills-section {
+        padding: 0;
+    }
+    .s-container {
+        background: none;
+        border: none;
+        backdrop-filter: none;
+        box-shadow: none;
         padding: 0;
     }
     .s-grid {
