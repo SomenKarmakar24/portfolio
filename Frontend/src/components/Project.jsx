@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaCode, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaChevronDown, FaChevronUp, FaReact, FaServer } from 'react-icons/fa';
+import { SiDjango, SiPostgresql, SiCloudinary } from 'react-icons/si';
 import "../assets/css/Project.css";
 import portfolioThumbnail from '../assets/img/portfolio_thumbnail.png';
 
@@ -12,11 +13,11 @@ const projectData = [
         live_url: null,
         image: portfolioThumbnail,
         tech: [
-            { name: "React.js" },
-            { name: "Django" },
-            { name: "PostgreSQL" },
-            { name: "REST API" },
-            { name: "Cloudinary" },
+            { name: "React.js", icon: <FaReact /> },
+            { name: "Django", icon: <SiDjango /> },
+            { name: "PostgreSQL", icon: <SiPostgresql /> },
+            { name: "REST API", icon: <FaServer /> },
+            { name: "Cloudinary", icon: <SiCloudinary /> },
         ]
     },
 ];
@@ -81,7 +82,7 @@ const Project = () => {
                                     <p className="p-project-desc">{project.description}</p>
                                     <div className="p-tech-stack">
                                         {project.tech.map((t, i) => (
-                                            <span key={i} className="p-tag"><FaCode className="p-tag-icon" /> {t.name}</span>
+                                            <span key={i} className="p-tag">{t.icon} {t.name}</span>
                                         ))}
                                     </div>
                                 </div>

@@ -83,7 +83,7 @@ const GitContribution = () => {
     const years = ['last', 2025, 2024];
 
     return (
-        <section className="p-git-section">
+        <section className="p-git-section" id="GIT_CONTRIBUTION">
             <div className="p-container">
                 <div className="p-terminal-card">
                     <div className="p-terminal-header">
