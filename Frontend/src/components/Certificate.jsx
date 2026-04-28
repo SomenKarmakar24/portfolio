@@ -5,6 +5,8 @@ import cert1 from '../assets/img/cert_1.png';
 import cert2 from '../assets/img/cert_2.png';
 import cert3 from '../assets/img/cert_3.png';
 import cert4 from '../assets/img/cert_4.jpg';
+import cert5 from '../assets/img/cert_5.jpg';
+import cert6 from '../assets/img/cert_6.png';
 
 const certificateData = [
     {
@@ -38,6 +40,22 @@ const certificateData = [
         date: "JAN 2023",
         credentialUrl: null,
         image: cert4,
+    },
+    {
+        id: 5,
+        title: "Ethics In Engineering Practice",
+        issuedBy: "NPTEL",
+        date: "FEB 2023",
+        credentialUrl: null,
+        image: cert5,
+    },
+    {
+        id: 6,
+        title: "Introduction to Artificial Intelligence",
+        issuedBy: "IBM",
+        date: "SEP 2024",
+        credentialUrl: null,
+        image: cert6,
     },
 ];
 
