@@ -7,6 +7,8 @@ import cert3 from '../assets/img/cert_3.png';
 import cert4 from '../assets/img/cert_4.jpg';
 import cert5 from '../assets/img/cert_5.jpg';
 import cert6 from '../assets/img/cert_6.png';
+import cert7 from '../assets/img/cert_7.png';
+import cert8 from '../assets/img/cert_8.png';
 
 const certificateData = [
     {
@@ -56,6 +58,22 @@ const certificateData = [
         date: "SEP 2024",
         credentialUrl: null,
         image: cert6,
+    },
+    {
+        id: 7,
+        title: "Python",
+        issuedBy: "HackerRank",
+        date: "FEB 2025",
+        credentialUrl: "https://www.hackerrank.com/certificates/iframe/87c2280c76d9",
+        image: cert7,
+    },
+    {
+        id: 8,
+        title: "Introduction to Internet of Things",
+        issuedBy: "NPTEL",
+        date: "NOV 2025",
+        credentialUrl: null,
+        image: cert8,
     },
 ];
 
