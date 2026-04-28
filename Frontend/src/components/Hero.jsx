@@ -69,6 +69,10 @@ const Hero = () => {
                     <div className="h-image-wrapper">
                         <img src={ProfileImg} alt="Somen" className="h-profile-img" />
                         <div className="h-scan-ring"></div>
+                        <div className="h-online-status">
+                            <span className="h-online-dot"></span>
+                            <span className="h-online-text">AVAILABLE_FOR_WORK</span>
+                        </div>
                     </div>
 
                     
