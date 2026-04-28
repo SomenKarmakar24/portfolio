@@ -36,14 +36,14 @@ const Skills = () => {
     return (
         <section className="s-skills-section" id="SKILLS">
             <div className="s-container">
-                <section className="a-dossier-header">
-                    <div className="a-header-title">
+                <div className="a-dossier-header">
+                    <div className="p-title">
                         <FaTerminal className="a-icon-neon" />
-                        <h2><strong>SKILLS:</strong></h2>
+                        <h2 className='m-0'><strong>SKILLS</strong></h2>
                     </div>
-                </section>
+                </div>
 
-                <section className="s-grid">
+                <div className="s-grid">
                     {skillCategories.map((category, index) => (
                         <div key={index} className="s-card">
                             <div className="s-card-header">
@@ -67,7 +67,7 @@ const Skills = () => {
                             </div>
                         </div>
                     ))}
-                </section>
+                </div>
             </div>
         </section>
     );

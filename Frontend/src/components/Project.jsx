@@ -13,12 +13,12 @@ const projectData = [
         live_url: null,
         image: portfolioThumbnail,
         tech: [
-            { name: "React.js", icon: <FaReact /> },
-            { name: "Vite", icon: <SiVite /> },
-            { name: "JavaScript", icon: <SiJavascript /> },
-            { name: "CSS3", icon: <SiCss3 /> },
-            { name: "Bootstrap", icon: <SiBootstrap /> },
-            { name: "React Router", icon: <SiReactrouter /> },
+            { name: "React.js", icon: <FaReact style={{color: '#61DAFB'}} /> },
+            { name: "Vite", icon: <SiVite style={{color: '#646CFF'}} /> },
+            { name: "JavaScript", icon: <SiJavascript style={{color: '#F7DF1E'}} /> },
+            { name: "CSS3", icon: <SiCss3 style={{color: '#1572B6'}} /> },
+            { name: "Bootstrap", icon: <SiBootstrap style={{color: '#7952B3'}} /> },
+            { name: "React Router", icon: <SiReactrouter style={{color: '#CA4245'}} /> },
         ]
     },
 ];
