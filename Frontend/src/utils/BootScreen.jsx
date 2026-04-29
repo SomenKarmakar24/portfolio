@@ -1,92 +1,77 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BootScreen.css';
 
-const CHARS = "アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&";
+const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+const NAME = "SOMEN KARMAKAR";
+const SUBTITLE = "FULL-STACK DEVELOPER";
 
-const GlitchText = ({ text }) => {
-    const [display, setDisplay] = useState(text);
+const useGlitchText = (finalText, startDelay = 0) => {
+    const [display, setDisplay] = useState(() => finalText.split("").map(() => " ").join(""));
+    const [done, setDone] = useState(false);
 
     useEffect(() => {
-        let iteration = 0;
-        const interval = setInterval(() => {
-            setDisplay(
-                text.split("").map((char, i) => {
-                    if (char === " ") return " ";
-                    if (i < iteration) return text[i];
-                    return CHARS[Math.floor(Math.random() * CHARS.length)];
-                }).join("")
-            );
-            if (iteration >= text.length) clearInterval(interval);
-            iteration += 0.5;
-        }, 40);
-        return () => clearInterval(interval);
-    }, [text]);
+        let timeout;
+        timeout = setTimeout(() => {
+            let iteration = 0;
+            const interval = setInterval(() => {
+                setDisplay(
+                    finalText.split("").map((char, i) => {
+                        if (char === " ") return " ";
+                        if (i < iteration) return finalText[i];
+                        return CHARS[Math.floor(Math.random() * CHARS.length)];
+                    }).join("")
+                );
+                iteration += 0.4;
+                if (iteration >= finalText.length) {
+                    clearInterval(interval);
+                    setDisplay(finalText);
+                    setDone(true);
+                }
+            }, 40);
+        }, startDelay);
 
-    return <span>{display}</span>;
+        return () => clearTimeout(timeout);
+    }, [finalText, startDelay]);
+
+    return { display, done };
 };
 
 const BootScreen = ({ onComplete }) => {
-    const canvasRef = useRef(null);
-    const [phase, setPhase] = useState('matrix');   // matrix -> glitch -> fadeout
     const [fadeOut, setFadeOut] = useState(false);
+    const [showSubtitle, setShowSubtitle] = useState(false);
+    const [showBar, setShowBar] = useState(false);
 
-    // Matrix rain on canvas
+    const { display: nameDisplay, done: nameDone } = useGlitchText(NAME, 300);
+    const { display: subtitleDisplay } = useGlitchText(SUBTITLE, 1200);
+
     useEffect(() => {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const cols = Math.floor(canvas.width / 16);
-        const drops = Array(cols).fill(1);
-
-        const draw = () => {
-            ctx.fillStyle = 'rgba(0,0,0,0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#00ff41';
-            ctx.font = '14px monospace';
-            drops.forEach((y, i) => {
-                const char = CHARS[Math.floor(Math.random() * CHARS.length)];
-                ctx.fillText(char, i * 16, y * 16);
-                if (y * 16 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            });
-        };
-
-        const matrixInterval = setInterval(draw, 40);
-
-        // After 1.5s switch to glitch phase
-        const t1 = setTimeout(() => {
-            clearInterval(matrixInterval);
-            setPhase('glitch');
-        }, 1500);
-
-        // After glitch, fade out
-        const t2 = setTimeout(() => {
+        const t1 = setTimeout(() => setShowSubtitle(true), 1000);
+        const t2 = setTimeout(() => setShowBar(true), 1800);
+        const t3 = setTimeout(() => {
             setFadeOut(true);
             setTimeout(onComplete, 700);
-        }, 2800);
+        }, 3200);
 
-        return () => {
-            clearInterval(matrixInterval);
-            clearTimeout(t1);
-            clearTimeout(t2);
-        };
+        return () => [t1, t2, t3].forEach(clearTimeout);
     }, []);
 
     return (
         <div className={`boot-screen ${fadeOut ? 'boot-fadeout' : ''}`}>
-            <canvas ref={canvasRef} className="boot-canvas" />
-            {phase === 'glitch' && (
-                <div className="boot-glitch-overlay">
-                    <div className="boot-glitch-text" data-text="SOMEN_OS">
-                        <GlitchText text="SOMEN_OS" />
-                    </div>
-                    <div className="boot-glitch-sub">
-                        <GlitchText text="ACCESS GRANTED" />
-                    </div>
+            <div className="boot-content">
+                <div className={`boot-name ${nameDone ? 'boot-name-done' : ''}`}>
+                    {nameDisplay}
                 </div>
-            )}
+                {showSubtitle && (
+                    <div className="boot-subtitle">{subtitleDisplay}</div>
+                )}
+                {showBar && (
+                    <div className="boot-divider">
+                        <div className="boot-divider-line"></div>
+                        <span className="boot-divider-text">INITIALIZING...</span>
+                        <div className="boot-divider-line"></div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
