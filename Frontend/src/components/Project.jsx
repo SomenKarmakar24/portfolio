@@ -26,7 +26,7 @@ const projectData = [
         id: 2,
         title: "AdMorph - AI Ad Generator",
         description: "AI-driven system that auto-generates creative product advertisements from user inputs like product details and target audience, using ML and NLP to deliver engaging, customizable ad content.",
-        github_url: null,
+        github_url: "https://github.com/SomenKarmakar24/AdMorph",
         live_url: null,
         image: adMorphThumbnail,
         tech: [
