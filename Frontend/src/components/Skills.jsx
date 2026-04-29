@@ -39,7 +39,7 @@ const Skills = () => {
                 <div className="a-dossier-header">
                     <div className="p-title">
                         <FaTerminal className="a-icon-neon" />
-                        <h2 className='m-0'><strong>SKILLS</strong></h2>
+                        <h2 className='m-0'><strong>SKILLS:</strong></h2>
                     </div>
                 </div>
 
