@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaTerminal, FaSatellite, FaSkullCrossbones } from 'react-icons/fa';
+import { FaTerminal, FaSatellite, FaSkullCrossbones, FaGithub, FaLinkedin } from 'react-icons/fa';
 import "../assets/css/Hero.css";
 import ProfileImg from "../assets/img/Somen1.jpg"; 
 import Typing_Animation from '../utils/Typing_Animation';
@@ -66,12 +66,18 @@ const Hero = () => {
             <div className="h-main-console">
                 <div className="h-profile-module">
                     {/* This stays on right in Desktop, top in Mobile */}
-                    <div className="h-image-wrapper">
-                        <img src={ProfileImg} alt="Somen" className="h-profile-img" />
-                        <div className="h-scan-ring"></div>
-                        <div className="h-online-status">
-                            <span className="h-online-dot"></span>
-                            <span className="h-online-text">AVAILABLE_FOR_WORK</span>
+                    <div className="h-image-container">
+                        <div className="h-image-wrapper">
+                            <img src={ProfileImg} alt="Somen" className="h-profile-img" />
+                            <div className="h-scan-ring"></div>
+                            <div className="h-online-status">
+                                <span className="h-online-dot"></span>
+                                <span className="h-online-text">AVAILABLE_FOR_WORK</span>
+                            </div>
+                        </div>
+                        <div className="h-social-icons">
+                            <a href="https://github.com/SomenKarmakar24" target="_blank" rel="noreferrer" className="h-social-btn"><FaGithub /></a>
+                            <a href="https://www.linkedin.com/in/somen-karmakar-74453724a/" target="_blank" rel="noreferrer" className="h-social-btn"><FaLinkedin /></a>
                         </div>
                     </div>
 
@@ -116,7 +122,6 @@ const Hero = () => {
                     <button className="h-console-btn" onClick={(e) => Scroll_To_Section(e, 'PROJECTS')}>
                         <FaTerminal /> INITIATE_PROJECTS
                     </button>
-
                 </div>
             </div>
 
