@@ -100,6 +100,14 @@
     margin-bottom: 40px;
 }
 
+.h-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
 /* Image & Scanning Effect */
 .h-image-wrapper {
     position: relative;
@@ -139,7 +147,20 @@
     font-weight: bold;
     color: var(--matrix-neon);
     letter-spacing: 2px;
-    animation: h-glitch-status 3s infinite;
+    animation: h-glitch-status 3s infinite, h-neon-flicker 3s infinite;
+}
+
+@keyframes h-neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow: 0 0 10px var(--matrix-neon), 0 0 20px var(--matrix-neon);
+        border-color: var(--matrix-neon);
+        color: var(--matrix-neon);
+    }
+    20%, 24%, 55% {
+        box-shadow: none;
+        border-color: rgba(0, 255, 65, 0.1);
+        color: rgba(0, 255, 65, 0.3);
+    }
 }
 
 .h-online-dot {
@@ -149,6 +170,8 @@
     background: var(--matrix-neon);
     box-shadow: 0 0 6px var(--matrix-neon);
     animation: h-dot-pulse 1s infinite;
+    position: relative;
+    flex-shrink: 0;
 }
 
 .h-online-text {
@@ -175,6 +198,36 @@
     87% { opacity: 1; color: #00f3ff; letter-spacing: 0px; transform: translate(2px, 0); }
     88% { opacity: 0.2; color: #fff; letter-spacing: 3px; transform: translate(0); }
     89% { opacity: 1; color: var(--matrix-neon); letter-spacing: 2px; }
+}
+
+.h-social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.h-social-btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--matrix--neon-dim);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--matrix-neon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.h-social-btn:hover {
+    background: var(--matrix-neon);
+    color: #000;
+    box-shadow: 0 0 15px var(--matrix-neon);
+    transform: translateX(-3px);
 }
 
 .h-scan-ring {
