@@ -11,7 +11,7 @@ const projectData = [
         title: "Developer Portfolio",
         description: "A hacker-themed full-stack developer portfolio with Matrix rain background, terminal UI, dynamic sections and Web3Forms contact integration.",
         github_url: "https://github.com/SomenKarmakar24/portfolio",
-        live_url: null,
+        live_url: "https://somenkarmaka.me",
         image: portfolioThumbnail,
         tech: [
             { name: "React.js", icon: <FaReact style={{color: '#61DAFB'}} /> },

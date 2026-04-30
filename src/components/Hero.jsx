@@ -47,7 +47,7 @@ const Hero = () => {
 
 
     return (
-        <section className="h-hero-fullscreen">
+        <section className="h-hero-fullscreen" id="HERO">
             <div className="h-binary-overlay"></div>
 
             <div className="h-top-bar">
@@ -108,7 +108,7 @@ const Hero = () => {
                         {/* ***** DESCRIPTION BOX ****** */}
                         <div className="h-bio-box">
                             <p className="h-bio-text">
-                                <span className="h-bio-label">DESCRIPTION:</span> Another curious person who is always ready to learn new things and Passionate about building efficient and scalable Web App.
+                                <span className="h-bio-label">DESCRIPTION:</span> Just a curious developer who loves learning and is passionate about Agentic AI, Machine Learning and building robust backend systems.
                             </p>
                             <p className="h-bio-text">
                                 <span className="h-bio-label">LOCATION:</span> Kolkata, West Bengal
