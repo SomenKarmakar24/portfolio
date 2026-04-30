@@ -11,7 +11,7 @@
 
 ## 🖥️ Live Preview
 
-🌐 [somenkarmakar.me](https://somenkarmakar.me) *(coming soon)*
+🌐 [somenkarmaka.me](https://somenkarmaka.me) *(coming soon)*
 
 ---
 
@@ -121,7 +121,7 @@ npm run dev
 
 **Somen Karmakar**
 
-- 🌐 Portfolio: [somenkarmakar.me](https://somenkarmakar.me)
+- 🌐 Portfolio: [somenkarmaka.me](https://somenkarmaka.me)
 - 💻 GitHub: [github.com/SomenKarmakar24](https://github.com/SomenKarmakar24)
 - 💼 LinkedIn: [linkedin.com/in/somen-karmakar-74453724a](https://www.linkedin.com/in/somen-karmakar-74453724a/)
 - 📧 Email: somenkarmakar.info2432@gmail.com
