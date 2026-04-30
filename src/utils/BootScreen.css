@@ -24,13 +24,15 @@
 
 /* Main Name */
 .boot-name {
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-size: clamp(1.8rem, 8vw, 5.5rem);
     font-weight: 900;
-    letter-spacing: 10px;
+    letter-spacing: clamp(2px, 2vw, 10px);
     color: #00ff41;
     text-shadow: 0 0 10px #00ff41;
     animation: boot-glitch 0.15s infinite;
     white-space: nowrap;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .boot-name-done {
