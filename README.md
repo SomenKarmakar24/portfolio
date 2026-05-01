@@ -11,7 +11,7 @@
 
 ## 🖥️ Live Preview
 
-🌐 [somenkarmaka.me](https://somenkarmaka.me) *(coming soon)*
+🌐 [somenkarmaka.me](https://somenkarmaka.me) 
 
 ---
 
