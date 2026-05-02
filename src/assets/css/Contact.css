@@ -172,7 +172,7 @@
     transform: translateY(-2px);
 }
 
-/* Success Banner — replaces alert() which is blocked on mobile */
+/* Success Banner — shown after successful send */
 .c-success-banner {
     background: rgba(0, 255, 65, 0.1);
     border: 1px solid var(--matrix-neon);
@@ -183,6 +183,29 @@
     letter-spacing: 1px;
     text-align: center;
     animation: c-fade-in 0.4s ease;
+}
+
+/* Full success screen inside the form window */
+.c-success-screen {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.c-success-sub {
+    color: var(--matrix-neon);
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* Field-level validation errors from Formspree */
+.c-field-error {
+    color: var(--color-danger);
+    font-size: 0.75rem;
+    margin-top: 4px;
 }
 
 @keyframes c-fade-in {
