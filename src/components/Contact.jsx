@@ -11,16 +11,19 @@ function Contact() {
     const [result, setResult] = useState("AWAITING_INPUT");
     const [statusClass, setStatusClass] = useState("status-idle");
     const [isSending, setIsSending] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const formRef = React.useRef(null);
 
-    // Sending Or SUbmiting message
+    // Sending Or Submitting message
     const onSubmit = async (event) => {
         event.preventDefault();
         setIsSending(true);
+        setShowSuccess(false);
         setResult("INITIALIZING_TRANSMISSION...");
         setStatusClass("status-processing");
 
+        // Capture form data before any await — keeps the reference safe on mobile
         const formData = new FormData(event.target);
-        // Ensure VITE_EMAIL_ACCESS_KEY is set in your .env file
         formData.append("access_key", import.meta.env.VITE_EMAIL_ACCESS_KEY);
 
         try {
@@ -34,8 +37,11 @@ function Contact() {
             if (data.success) {
                 setResult("DATA_PACKET_DELIVERED");
                 setStatusClass("status-success");
-                alert("Uplink Established: Message Sent Successfully!");
-                event.target.reset();
+                setShowSuccess(true);
+                // Use ref to reset — event.target can be stale after await on mobile
+                if (formRef.current) formRef.current.reset();
+                // Auto-hide success banner after 5s
+                setTimeout(() => setShowSuccess(false), 5000);
             } else {
                 setResult("TRANSMISSION_FAILED: " + data.message.toUpperCase());
                 setStatusClass("status-error");
@@ -116,7 +122,7 @@ function Contact() {
                             </div>
                             
                             {/* * CONTACT FORM * */}
-                            <form className="c-actual-form" onSubmit={onSubmit}>
+                            <form className="c-actual-form" onSubmit={onSubmit} ref={formRef}>
                                 <div className="c-input-box">
                                     <label><FaTerminal /> SOURCE_IDENTIFIER</label>
                                     <input type="text" placeholder="Full Name" name="name" required />
@@ -136,6 +142,12 @@ function Contact() {
                                     <label><FaTerminal /> DATA_CONTENT</label>
                                     <textarea placeholder="Enter message payload..." name="message" required rows="4"></textarea>
                                 </div>
+
+                                {showSuccess && (
+                                    <div className="c-success-banner">
+                                        ✔ UPLINK ESTABLISHED — MESSAGE SENT SUCCESSFULLY
+                                    </div>
+                                )}
 
                                 <button type="submit" className='c-submit-btn' disabled={isSending} >
                                     {isSending ? <div className="c-loader"></div> : <FaPaperPlane />}
