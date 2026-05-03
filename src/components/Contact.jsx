@@ -9,7 +9,7 @@ function Contact() {
     const primaryLocation = "West Bengal, India";
     const currentLocation = "Kolkata, India";
 
-    const [state, handleSubmit] = useForm("xbdwdlva");
+    const [state, handleSubmit, reset] = useForm("xbdwdlva");
 
     // Derive status label and class from Formspree state
     const statusLabel = state.succeeded
@@ -102,6 +102,9 @@ function Contact() {
                                     <p className="c-success-sub">
                                         &gt; TRANSMISSION COMPLETE. STANDING BY FOR RESPONSE_
                                     </p>
+                                    <button className="c-reset-btn" onClick={reset}>
+                                        <FaPaperPlane /> SEND_ANOTHER_MESSAGE
+                                    </button>
                                 </div>
                             ) : (
                                 /* * CONTACT FORM * */
