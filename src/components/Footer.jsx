@@ -24,7 +24,7 @@ const Footer = () => {
                         </div>
                         <div className="f-status-item">
                             <FaCircle className="f-status-icon f-online" />
-                            <span>WORK: CODEVORA</span>
+                            <span>LIVE: SOMENKARMAKA.ME</span>
                         </div>
                         <div className="f-status-item">
                             <span className="f-blink-text">{">"} SYSTEM READY_</span>
