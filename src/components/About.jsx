@@ -54,7 +54,7 @@ const About = () => {
 
                 <div className="a-action-block">
                     <a className="a-btn a-btn-main" href="/Somen_CV.pdf" target="_blank" rel="noopener noreferrer">
-                        <FaDownload /> DOWNLOAD_CV
+                        <FaDownload /> RESUME
                     </a>
                     <button className="a-btn a-btn-outline" onClick={(e) => Scroll_To_Section(e, 'CONTACT')}>
                         <FaBriefcase /> HIRE_ME
