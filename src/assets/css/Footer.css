@@ -150,3 +150,37 @@
 @keyframes n-text-blink {
     50% { opacity: 0.3; }
 }
+
+/* Visitor Counter */
+.f-visitor-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid var(--matrix--neon-dim);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    color: var(--matrix-neon);
+    font-family: var(--font);
+}
+
+.f-visitor-icon {
+    font-size: 0.8rem;
+    filter: drop-shadow(0 0 3px var(--matrix-neon));
+}
+
+.f-visitor-label {
+    color: #888;
+}
+
+.f-visitor-number {
+    color: var(--color-danger);
+    font-weight: bold;
+    text-shadow: 0 0 6px var(--color-danger);
+}
+
+.f-visitor-loading {
+    color: #555;
+    font-style: italic;
+}

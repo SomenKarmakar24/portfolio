@@ -1,9 +1,18 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaCircle } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaCircle, FaEye } from 'react-icons/fa';
 import "../assets/css/Footer.css";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const [visitorCount, setVisitorCount] = useState(null);
+
+    useEffect(() => {
+        // CounterAPI: increments on each hit and returns the new count
+        fetch('https://api.counterapi.dev/v1/somenkarmaka-me/visits/up')
+            .then((res) => res.json())
+            .then((data) => setVisitorCount(data?.count ?? null))
+            .catch(() => setVisitorCount(null));
+    }, []);
 
     return (
         <footer className="f-footer">
@@ -53,7 +62,18 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/somen-karmakar-74453724a/" target="_blank" rel="noreferrer" className="f-social-link">
                             <FaLinkedin /> <span className="f-tooltip">LINKEDIN</span>
                         </a>
+                    </div>
 
+                    {/* Visitor Counter */}
+                    <div className="f-visitor-counter">
+                        <FaEye className="f-visitor-icon" />
+                        <span className="f-visitor-label">TOTAL_VISITORS:</span>
+                        <span className="f-visitor-count">
+                            {visitorCount === null
+                                ? <span className="f-visitor-loading">LOADING_<span className="f-blink-text">_</span></span>
+                                : <span className="f-visitor-number">[{visitorCount.toLocaleString()}]</span>
+                            }
+                        </span>
                     </div>
                 </div>
             </div>
