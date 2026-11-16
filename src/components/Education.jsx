@@ -9,7 +9,7 @@ const educationData = [
         institution: "Techno Engineering College Banipur",
         location: "Habra",
         year: "2022 - 2026",
-        grade: "CGPA: 7.56 / 10",
+        grade: "CGPA: 7.66 / 10",
     },
     {
         degree: "High Secondary",
