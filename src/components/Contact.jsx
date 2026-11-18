@@ -68,7 +68,7 @@ function Contact() {
                             <div className="c-icon-frame"><FaPhone /></div>
                             <div className="c-detail-text">
                                 <h3>VOICE_CHANNEL</h3>
-                                <p>+91 9064650410</p>
+                                <p>+91 90XXXXX410</p>
                             </div>
                         </div>
 
